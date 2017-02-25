@@ -9,12 +9,19 @@ class sitioController extends Controller
     //
     public function index()
     {
-     echo "Hola Mundo";
+     return view('sitio/index');
     }
+
 
     public function saludar(Request $request, $nombre)
     {
-     echo "Hello " . $nombre;
+     return view('sitio/saludar', ['elNombre' => $nombre]);
     }
+
+    public function saludarCualquier(Request $request, $nombre, $cargo = false)
+    {
+     return view('sitio/saludarCualquier', ['elNombre' => $nombre, 'elCargo' => $cargo]);
+    }
+
 
 }

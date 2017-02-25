@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('hola/index', 'sitioController@index');
+Route::get('hola/saludar/{nombre}', 'sitioController@saludar');
+Route::get('hola/saludarCualquier/{nombre}/{cargo?}', 'sitioController@saludarCualquier');
